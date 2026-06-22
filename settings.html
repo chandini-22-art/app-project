@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="settings">
+    <nav>
+        <div class="brand">
+            <h2>🏆 High Score</h2>
+        </div>
+        <div class="nav-links">
+            <button onclick="goToDashboard()">Dashboard</button>
+            <button onclick="goToLeaderboard()">Leaderboard</button>
+            <button onclick="goToProfile()">Profile</button>
+        </div>
+        <div class="nav-actions">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section class="settings-page">
+        <div class="settings-panel">
+            <h1>Settings</h1>
+            <p>Customize your experience, update your bio, and reset progress when you need a fresh start.</p>
+            <form id="settingsForm" class="settings-form">
+                <div class="setting-row">
+                    <label><input id="themeToggle" type="checkbox"> Enable dark mode</label>
+                </div>
+                <div class="setting-row">
+                    <label><input id="notifyToggle" type="checkbox"> Receive notifications</label>
+                </div>
+                <div class="setting-row">
+                    <label>Bio update</label>
+                    <textarea id="profileBioField" placeholder="Tell the community more about you"></textarea>
+                </div>
+                <div class="setting-row">
+                    <button class="hero-btn" type="submit">Save Settings</button>
+                    <button class="secondary-btn" type="button" onclick="resetProgress()">Reset Progress</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
