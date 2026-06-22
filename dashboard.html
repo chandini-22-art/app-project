@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="dashboard">
+
+    <nav>
+        <div class="brand">
+            <h2>🏆 High Score</h2>
+        </div>
+        <div class="nav-links">
+            <button onclick="goToLeaderboard()">Leaderboard</button>
+            <button onclick="goToProfile()">Profile</button>
+            <button onclick="goToSettings()">Settings</button>
+        </div>
+        <div class="nav-actions">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="dashboard-grid">
+            <div class="dashboard-panel">
+                <div class="profile-card" id="profileCard"></div>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Current Rank</h3>
+                        <h1 id="rankValue">#1</h1>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Points</h3>
+                        <h1 id="pointsValue">12,450</h1>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Matches</h3>
+                        <h1 id="matchesValue">248</h1>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Wins</h3>
+                        <h1 id="winsValue">168</h1>
+                    </div>
+                </div>
+                <div class="xp-section">
+                    <h3>XP Progress</h3>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="xpFill"></div>
+                    </div>
+                    <p id="nextLevelText">75% to next level</p>
+                </div>
+            </div>
+            <div class="dashboard-sidebar">
+                <div class="podium-card">
+                    <h3>Top 3 Podium</h3>
+                    <div class="podium-grid" id="dashboardPodium"></div>
+                </div>
+                <div class="achievement-card">
+                    <h3>Achievements</h3>
+                    <div class="achievement-grid" id="achievementGrid"></div>
+                </div>
+                <div class="score-card">
+                    <h3>Quick Actions</h3>
+                    <p>Stay on top of your goals with instant access to your leaderboard.</p>
+                    <button class="hero-btn" onclick="goToLeaderboard()">View Leaderboard</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
