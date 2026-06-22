@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="leaderboard">
+
+    <nav>
+        <div class="brand">
+            <h2>🏆 High Score</h2>
+        </div>
+        <div class="nav-links">
+            <button onclick="goToDashboard()">Dashboard</button>
+            <button onclick="goToProfile()">Profile</button>
+            <button onclick="goToSettings()">Settings</button>
+        </div>
+        <div class="nav-actions">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section class="leaderboard">
+        <div class="leaderboard-head">
+            <div>
+                <h1>Leaderboard</h1>
+                <p>Search the best players, compare your rank, and climb the podium.</p>
+            </div>
+            <div class="search-group">
+                <input id="searchInput" type="search" placeholder="Search players...">
+                <button class="secondary-btn" onclick="goToProfile()">My Profile</button>
+            </div>
+        </div>
+
+        <div class="podium-grid" id="leaderboardPodium"></div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboardBody"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
