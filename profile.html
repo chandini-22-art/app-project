@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="profile">
+    <nav>
+        <div class="brand">
+            <h2>🏆 High Score</h2>
+        </div>
+        <div class="nav-links">
+            <button onclick="goToDashboard()">Dashboard</button>
+            <button onclick="goToLeaderboard()">Leaderboard</button>
+            <button onclick="goToSettings()">Settings</button>
+        </div>
+        <div class="nav-actions">
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <section class="profile-page">
+        <div class="profile-summary">
+            <div class="profile-main">
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">P</div>
+                    <div class="profile-details">
+                        <h2 id="profileName">Player</h2>
+                        <p id="profileBio">This is your player summary. Level up, earn achievements, and boost your
+                            score.</p>
+                        <span id="profileJoined">Joined Jan 2025</span>
+                    </div>
+                </div>
+                <div class="profile-detail-box" id="profileStats"></div>
+            </div>
+            <div class="profile-actions">
+                <div class="score-card">
+                    <h3>Score Management</h3>
+                    <p>Apply point boosts and watch your rank improve instantly.</p>
+                    <div class="score-actions">
+                        <div class="score-action"><button data-points="250">+250 pts</button></div>
+                        <div class="score-action"><button data-points="500">+500 pts</button></div>
+                        <div class="score-action"><button data-points="1000">+1000 pts</button></div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <h3>Achievements</h3>
+                    <div class="achievement-grid" id="profileAchievements"></div>
+                </div>
+                <div class="score-card">
+                    <h3>Progress</h3>
+                    <div class="xp-bar">
+                        <div class="xp-fill" id="profileXpFill"></div>
+                    </div>
+                    <p id="profileXpText">Gain more XP to level up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
